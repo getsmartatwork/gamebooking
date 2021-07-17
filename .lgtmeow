@@ -1,8 +1,6 @@
 approvals:
 [
   {
-    # count determines how many approvals are needed
-    # self determines whether you can approve your own pull requests
     match: "all[count=2,self=false]"
   }
 ]
