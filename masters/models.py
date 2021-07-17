@@ -15,3 +15,13 @@ class Game(models.Model):
 
     def __str__(self):
         return "{}".format(self.name)
+
+class City(models.Model):
+    
+    name = models.CharField(max_length=200)
+    state = models.CharField(max_length=20)
+    status=models.BooleanField(default=True)
+    created_date = models.DateTimeField(default=timezone.now)
+    
+    def __str__(self):
+        return "{} {}".format(self.created_date, self.status)
