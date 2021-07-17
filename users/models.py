@@ -13,7 +13,6 @@ class profileModel(models.Model):
     profile_pic=models.ImageField(blank=True,null=True)
     mobile_no=models.CharField(max_length=20)
     games_interest=models.ManyToManyField(Game)
-
     experience=models.TextField()
     about=models.TextField()
     status=models.BooleanField(default=True)
