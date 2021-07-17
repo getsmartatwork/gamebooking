@@ -1,5 +1,7 @@
 # Gamebooking Project
 
+
+
 ## Follow the commands to setup the project in local environment
 
 ### create virtual environment outside the project
