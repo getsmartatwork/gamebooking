@@ -23,3 +23,11 @@ class profileModel(models.Model):
     def __str__(self):
         return "{}".format(self.about)    
 
+    
+class TeamMember(models.Model):
+    is_capatain=models.BooleanField()
+    created_date=models.DateTimeField(default=timezone.now)
+    status=models.BooleanField(default=True)
+
+def __str__(self):
+    return "{}".format(self.is_capatain,self.created_date,self.status)    
