@@ -21,5 +21,25 @@ class profileModel(models.Model):
 
 
     def __str__(self):
-        return "{}".format(self.about)    
+        return "{}".format(self.about)
+
+
+
+class HostGame(models.Model):
+    title=models.CharField(max_length=20)
+    description=models.TextField()
+    image=models.ImageField()
+    game=models.ForeignKey(Game,on_delete=models.CASCADE)
+    players_team=models.CharField(max_length=20)
+    no_of_players=models.IntegerField()
+    no_of_teams=models.IntegerField()
+    no_of_players_in_team=models.IntegerField()
+    created_date=models.DateTimeField(default=timezone.now)
+    status=models.BooleanField(default=True)
+    start_datetime=models.DateTimeField(default=timezone.now)
+    end_date_time=models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return "{} {}".format(self.created_date,self.status)
+
 
