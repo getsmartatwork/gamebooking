@@ -26,11 +26,15 @@ class profileModel(models.Model):
 
 
 class HostGame(models.Model):
+    players_choices=(
+        ("players","players"),
+        ("teams","teams")
+    )
     title=models.CharField(max_length=20)
     description=models.TextField()
     image=models.ImageField()
     game=models.ForeignKey(Game,on_delete=models.CASCADE)
-    players_team=models.CharField(max_length=20)
+    players_team=models.CharField(max_length=20,choices=players_choices)
     no_of_players=models.IntegerField()
     no_of_teams=models.IntegerField()
     no_of_players_in_team=models.IntegerField()
