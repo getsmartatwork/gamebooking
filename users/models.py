@@ -23,3 +23,10 @@ class profileModel(models.Model):
     def __str__(self):
         return "{}".format(self.about)    
 
+
+class Team(models.Model):
+    title=models.CharField(max_length=200)
+    description=models.TextField()
+    image=models.ImageField()
+    created_date=models.DateTimeField(default=timezone.now)
+    status=models.BooleanField(default=True)
