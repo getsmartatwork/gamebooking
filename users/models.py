@@ -39,3 +39,7 @@ class Team(models.Model):
     image=models.ImageField()
     created_date=models.DateTimeField(default=timezone.now)
     status=models.BooleanField(default=True)
+    game=models.ForeignKey(Game,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "{} {}".format(self.title,self.game)  
