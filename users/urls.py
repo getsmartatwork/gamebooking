@@ -8,4 +8,5 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('register/',views.Registeration,name='register'),
 ]
