@@ -5,7 +5,11 @@ from rest_framework import routers, serializers, viewsets
 
 router = routers.DefaultRouter()
 
+router.register(r'hostgame',  views.HostGameViewSet)
+router.register(r'schedule',  views.ScheduleViewSet)
+
+
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('crud/', include(router.urls)),
 ]
