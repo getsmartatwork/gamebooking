@@ -7,5 +7,7 @@ router = routers.DefaultRouter()
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+   
+    path('login/', views.login, name='login'),
+    path('crud/', include(router.urls)),
 ]
