@@ -7,6 +7,8 @@ router = routers.DefaultRouter()
 
 
 urlpatterns = [
+    path('', include(router.urls)),
+    path('register/',views.Registeration,name='register'),
    
     path('login/', views.login, name='login'),
     path('crud/', include(router.urls)),
